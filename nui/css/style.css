@@ -1,0 +1,73 @@
+@import url('https://fonts.googleapis.com/css2?family=Quantico&display=swap');
+
+body {
+    font-family: 'Arial', sans-serif;
+    overflow: hidden;
+    padding: 0;
+    margin: 0;
+}
+
+.keypad-container {
+    position: relative;
+    display: none;
+
+    top: 40vh;
+    left: 70vh;
+
+    width: 35vh;
+    height: 14vh;
+
+    background-color: #22272e;
+}
+
+.pass-title {
+    position: absolute;
+
+    left: 5vh;
+    top: 1.5vh;
+
+    color: grey;
+    font-size: 1.2vh;
+}
+
+#pass {
+    position: relative;
+
+    left: 5vh;
+    top: 5vh;
+
+    width: 23vh;
+
+    background-color: rgba(197, 39, 39, 0);
+    border-bottom: 0.2vh solid grey;
+    border-right: none;
+    border-left: none;
+    border-top: none;
+    outline: none;
+    color: white;
+    text-align: center;
+}
+
+#icon {
+    position: absolute;
+    top: 4.75vh;
+    left: 5.15vh;
+    color: grey;
+    font-size: 1.3vh;
+}
+
+.submit {
+    position: absolute;
+    bottom: 3vh;
+    right: 14vh;
+    border: none;
+    height: 2.4vh;
+    width: 9vh;
+    background-color: greenyellow;
+    border-radius: 0.3vh;
+    transition: all .15s ease-in-out;
+}
+
+.submit:hover {
+    background-color: rgb(135, 211, 20);
+}
