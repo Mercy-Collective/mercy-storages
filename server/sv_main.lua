@@ -52,7 +52,7 @@ RegisterNetEvent('mc-storage/server/add-new-storage', function(CoordsTable, Pinc
 	local src = source
 	local Player = Mercy.Functions.GetPlayer(src)
 	if IsRealEstate(Player) then
-		MySQL.Async.execute("INSERT INTO storages (owner, name, pincode, coords) VALUES (?, ?, ?, ?)", {TPlayer.PlayerData.citizenid, GenerateStorageId(), Pincode, json.encode(CoordsTable)})
+		MySQL.insert("INSERT INTO storages (owner, name, pincode, coords) VALUES (?, ?, ?, ?)", {TPlayer.PlayerData.citizenid, GenerateStorageId(), Pincode, json.encode(CoordsTable)})
 		Citizen.Wait(250)
 		TriggerEvent('mc-storage/server/setup-containers')
 	else
